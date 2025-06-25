@@ -1,0 +1,40 @@
+@import url('../vendor/normalize.css');
+@import url('../vendor/fonts.css');
+@import url('../blocks/page/page.css');
+@import url('../blocks/header/header.css');
+@import url('../blocks/content/content.css');
+@import url('../blocks/footer/footer.css');
+@import url('../blocks/profile/profile.css');
+@import url('../blocks/places/places.css');
+@import url('../blocks/card/card.css');
+@import url('../blocks/popup/popup.css');
+@import url('../blocks/popup/_is-animated/popup_is-animated.css');
+@import url('../blocks/popup/_is-opened/popup_is-opened.css');
+
+/* Плавное открытие/закрытие */
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.3s, opacity 0.3s linear;
+}
+
+.popup_is-opened {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Состояния наведения */
+.profile__edit-button:hover,
+.profile__add-button:hover,
+.card__like-button:hover,
+.card__delete-button:hover,
+.popup__close:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+/* Стиль активного лайка */
+.card__like-button_is-active {
+  background-image: url(../images/like-active.svg);
+}
